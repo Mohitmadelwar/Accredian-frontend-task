@@ -26,8 +26,10 @@ const [refereeData, setRefereeData] = useState({
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.post('http://localhost:3000/api/referrer', referrerData);
-    await axios.post('http://localhost:3000/api/referee', refereeData);
+    // await axios.post('http://localhost:3000/api/referrer', referrerData);
+    // await axios.post('http://localhost:3000/api/referee', refereeData);
+    await axios.post('https://accredian-backend-task-drab.vercel.app/api/referrer', referrerData);
+    await axios.post('https://accredian-backend-task-drab.vercel.app/api/referee', refereeData);
     alert('Data submitted successfully!');
     onClose();
   } catch (error) {
